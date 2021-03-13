@@ -23,24 +23,24 @@
                 </thead>
                 <tbody>
                     <form action="index.php" method="post">
-                        <tr  class="txt-center">
+                        <!-- <tr  class="txt-center">
                             <td>
                                 <label for="email">Email</label>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr  class="txt-center">
                             <td>
-                                <input type="text" name="email">
+                                <input type="text" name="email" placeholder="Email">
                             </td>
                         </tr>
-                        <tr  class="txt-center">
+                        <!-- <tr  class="txt-center">
                             <td>
                                 <label for="password">Password</label>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr  class="txt-center">
                             <td>
-                                <input type="password" name="password">
+                                <input type="password" name="password" placeholder="Password">
                             </td>
                         </tr>
                     </form>
@@ -48,13 +48,13 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit">Log in</button>
+                            <button type="submit" id="logInBtn" class="box-center btn">Log in</button>
                         </td>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit">Sign in</button>
+                            <button type="submit" id="signInBtn" class="box-center btn">Sign in</button>
                         </td>
                     </tr>
                 </tfoot>    
