@@ -34,6 +34,17 @@ body {
     cursor: pointer;
 }
 
+.form-class {
+    border: 0;
+    background-color: #f0f2f5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+}
+
 
 /*butttons global*/
 
@@ -60,18 +71,6 @@ table {
     -moz-border-radius: 6px;
     border-radius: 6px;
     background-color: white;
-}
-
-input[type="email"],
-input[type="password"] {
-    border: 0;
-    background-color: #f0f2f5;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    width: 50%;
-    margin: 5px;
-    padding: 5px;
 }
 
 #logInBtn {
