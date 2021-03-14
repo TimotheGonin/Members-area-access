@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design/default.css">
+    <link rel="stylesheet" type="text/css" href="design/default.css">
     <title>Homepage</title>
 </head>
 <body>
@@ -16,6 +16,7 @@
 <!-- LOG IN -->
         <section>
             <table class="box-center">
+            <!-- TITLE -->
                 <thead>
                     <tr class="txt-center">
                         <th><h3>Connection</h3></th>
@@ -23,24 +24,14 @@
                 </thead>
                 <tbody>
                     <form action="index.php" method="post">
-                        <!-- <tr  class="txt-center">
-                            <td>
-                                <label for="email">Email</label>
-                            </td>
-                        </tr> -->
                         <tr  class="txt-center">
                             <td>
-                                <input type="text" name="email" placeholder="Email">
+                                <input type="email" name="email" placeholder="Email" required>
                             </td>
                         </tr>
-                        <!-- <tr  class="txt-center">
-                            <td>
-                                <label for="password">Password</label>
-                            </td>
-                        </tr> -->
                         <tr  class="txt-center">
                             <td>
-                                <input type="password" name="password" placeholder="Password">
+                                <input type="password" name="password" placeholder="******" required>
                             </td>
                         </tr>
                     </form>
@@ -48,13 +39,14 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit" id="logInBtn" class="box-center btn">Log in</button>
+                            <button type="submit" id="logInBtn" name="login" class="box-center btn pointer">Log in</button>
                         </td>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit" id="signInBtn" class="box-center btn">Sign in</button>
+                            <p id="signInProposition">Want to join us ?</p>
+                            <a href="#"><button type="submit" id="signInBtn" name="singin" class="box-center btn pointer">Sign in</button></a>
                         </td>
                     </tr>
                 </tfoot>    

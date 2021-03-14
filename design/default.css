@@ -11,6 +11,7 @@ body {
 * {
     box-sizing: border-box;
     vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -27,6 +28,10 @@ body {
 .noPadnoMarg {
     margin: 0;
     padding: 0;
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 
@@ -57,7 +62,7 @@ table {
     background-color: white;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
     border: 0;
     background-color: #f0f2f5;
@@ -76,7 +81,17 @@ input[type="password"] {
 }
 
 hr {
-    width: 50%;
+    margin-top: 25px;
+    width: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#signInProposition {
+    font-style: italic;
+    color: grey;
 }
 
 #signInBtn {
