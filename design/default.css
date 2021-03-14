@@ -1,0 +1,109 @@
+/* RESET */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+}
+
+* {
+    box-sizing: border-box;
+    vertical-align: baseline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*GLOBAL CLASS*/
+
+.txt-center {
+    text-align: center;
+}
+
+.box-center {
+    margin: 0 auto;
+}
+
+.noPadnoMarg {
+    margin: 0;
+    padding: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/*butttons global*/
+
+.btn {
+    display: block;
+    border: 0;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    width: 147px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+
+/*log in form*/
+
+table {
+    width: 40%;
+    border: 0.2px solid #f0f2f5;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: white;
+}
+
+input[type="email"],
+input[type="password"] {
+    border: 0;
+    background-color: #f0f2f5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+}
+
+#logInBtn {
+    background-color: #42b72a;
+    margin-top: 20px;
+    width: 50%;
+}
+
+hr {
+    margin-top: 25px;
+    width: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#signInProposition {
+    font-style: italic;
+    color: grey;
+}
+
+#signInBtn {
+    background-color: #1877f2;
+    margin-bottom: 40px;
+}
+
+
+/*footer*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
