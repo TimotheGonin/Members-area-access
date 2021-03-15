@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="design/default.css">
-    <title>Homepage</title>
+    <title>Registration</title>
 </head>
 <body>
     <header class="txt-center">
@@ -19,14 +19,24 @@
             <!-- TITLE -->
                 <thead>
                     <tr class="txt-center">
-                        <th><h3>Connection</h3></th>
+                        <th><h3>Register</h3></th>
                     </tr>
                 </thead>
                 <tbody>
                     <form action="index.php" method="post">
                         <tr  class="txt-center">
                             <td>
+                                <input type="text" name="pseudo" class="form-class" placeholder="Pseudo" required>
+                            </td>
+                        </tr>
+                        <tr  class="txt-center">
+                            <td>
                                 <input type="email" name="email" class="form-class" placeholder="Email" required>
+                            </td>
+                        </tr>
+                        <tr  class="txt-center">
+                            <td>
+                                <input type="password" name="password" class="form-class" placeholder="******" required>
                             </td>
                         </tr>
                         <tr  class="txt-center">
@@ -39,14 +49,14 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-mid pointer">Log in</button>
+                        <button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn-mid pointer">Sign in</button>
                         </td>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <p id="signInProposition">Want to join us ?</p>
-                            <a href="registration.php"><button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn-sml pointer">Sign in</button></a>
+                            <p id="signInProposition">Want to log in ?</p>
+                            <a href="#"><button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-sml pointer">Log in</button></a>
                         </td>
                     </tr>
                 </tfoot>    
