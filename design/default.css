@@ -61,6 +61,24 @@ body {
     text-transform: uppercase;
 }
 
+.log-btn-sml {
+    background-color: #42b72a;
+}
+
+.log-btn-mid {
+    width: 50%;
+    background-color: #42b72a;
+}
+
+.sign-btn-sml {
+    background-color: #1877f2;
+}
+
+.sign-btn-mid {
+    width: 50%;
+    background-color: #1877f2;
+}
+
 
 /*log in form*/
 
@@ -74,9 +92,7 @@ table {
 }
 
 #logInBtn {
-    background-color: #42b72a;
     margin-top: 20px;
-    width: 50%;
 }
 
 hr {
@@ -94,7 +110,6 @@ a {
 }
 
 #signInBtn {
-    background-color: #1877f2;
     margin-bottom: 40px;
 }
 

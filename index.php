@@ -39,14 +39,14 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit" id="logInBtn" name="login" class="box-center btn pointer">Log in</button>
+                            <button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-mid pointer">Log in</button>
                         </td>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
                             <p id="signInProposition">Want to join us ?</p>
-                            <a href="registration.php"><button type="submit" id="signInBtn" name="singin" class="box-center btn pointer">Sign in</button></a>
+                            <a href="registration.php"><button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn-sml pointer">Sign in</button></a>
                         </td>
                     </tr>
                 </tfoot>    

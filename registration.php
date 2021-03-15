@@ -49,14 +49,14 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                            <button type="submit" id="logInBtn" name="login" class="box-center btn pointer">Log in</button>
+                        <button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn-mid pointer">Sign in</button>
                         </td>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
                             <p id="signInProposition">Want to log in ?</p>
-                            <a href="#"><button type="submit" id="signInBtn" name="singin" class="box-center btn pointer">Sign in</button></a>
+                            <a href="#"><button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-sml pointer">Log in</button></a>
                         </td>
                     </tr>
                 </tfoot>    
