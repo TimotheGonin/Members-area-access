@@ -46,6 +46,16 @@ body {
 }
 
 
+/*FORM ERROR*/
+
+.error-msg {
+    background-color: red;
+    color: white;
+    width: 40%;
+    padding: 5px;
+}
+
+
 /*butttons global*/
 
 .btn {
