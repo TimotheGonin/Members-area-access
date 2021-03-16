@@ -12,6 +12,7 @@
         // IF PASSWORD = PASSWORD_CONFIRM
         if($password != $pass_confirm){
             header('location: index.php?error=1&pass=1');
+            exit();
         };
 
         // IF EMAIL EXIST
@@ -21,6 +22,7 @@
         while($email_verification = $req->fetch()) {
             if($email_verification['numberEmail'] != 0){
                 header('location: index.php?error=1&email=1');
+                exit();
             }
         }
 
@@ -35,7 +37,8 @@
         $req = $db->prepare('INSERT INTO users(pseudo, email, password, secret) VALUES (?, ?, ?, ?)');
         $req->execute(array($pseudo, $email, $password, $secret));
 
-        header('location: index.php?succes=1');
+        header('location: index.php?success=1');
+        exit();
     }
 ?>
 <!DOCTYPE html>
