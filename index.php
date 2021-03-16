@@ -3,20 +3,39 @@
 
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_confirm'])){
         
-        //VARIABLES
+        // VARIABLES
         $pseudo = $_POST['pseudo'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $pass_confirm = $_POST['password_confirm'];
 
-        //IF PASSWORD = PASSWORD_CONFIRM
+        // IF PASSWORD = PASSWORD_CONFIRM
         if($password != $pass_confirm){
             header('location: index.php?error=1&pass=1');
         };
 
-        //IF EMAIL EXIST
+        // IF EMAIL EXIST
         $req = $db->prepare('SELECT count(*) as numberEmail FROM users WHERE email= ?');
         $req->execute(array($email));
+
+        while($email_verification = $req->fetch()) {
+            if($email_verification['numberEmail'] != 0){
+                header('location: index.php?error=1&email=1');
+            }
+        }
+
+        // HASH
+        $secret = sha1($email).time();
+        $secret = sha1($secret).time().time();
+
+        //PASSWORD CRYPT
+        $password = "aq1".sha1($password."1254")."25";
+
+        // REQ TO BDD
+        $req = $db->prepare('INSERT INTO users(pseudo, email, password, secret) VALUES (?, ?, ?, ?)');
+        $req->execute(array($pseudo, $email, $password, $secret));
+
+        header('location: index.php?succes=1');
     }
 ?>
 <!DOCTYPE html>
@@ -46,8 +65,13 @@
                 <tbody>
 <?php
     if(isset($_GET['error'])){
-        if(isset($_GET['pass']))
-        echo '<p class="error-msg box-center txt-center">Les mots de pass ne sont pas identiques.</p>';
+        if(isset($_GET['pass'])){
+            echo '<p class="error-msg box-center txt-center">Les mots de pass ne sont pas identiques.</p>';
+        }else if(isset($_GET['email'])){
+            echo '<p class="error-msg box-center txt-center">Cette adresse email est déjà prise.</p>';
+        }
+    } else if(isset($_GET['success'])){
+        echo '<p class="succes-msg box-center txt-center">Utilisateur enregistré avec succès !</p>';
     }
 ?>
                     <form action="index.php" method="post">
