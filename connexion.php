@@ -1,3 +1,33 @@
+<?php
+    require('src/connection.php');
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])){
+
+        //VARIABLES
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $error = 1;
+
+        //PASSWORD CRYPT
+        $password = "aq1".sha1($password."1254")."25";
+
+        //EMAIL AND PASSWORD MATCH
+        $req = $db->prepare('SELECT * FROM users WHERE email= ?');
+        $req->execute(array($email));
+
+        while($user = $req->fetch()) {
+            if($password == $user['password']) {
+                $error = 0;
+                header('location: connexion.php?success=1');
+                exit();
+            }
+        }
+        if($error == 1){
+            header('location: connexion.php?error=1');
+            exit();
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +53,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <form action="index.php" method="post">
+<?php
+    if(isset($_GET['error'])){
+        echo '<p class="error-msg box-center txt-center">nous ne pouvons pas vous authentifier.</p>';
+    } else if(isset($_GET['success'])) {
+        echo '<p class="succes-msg box-center txt-center">Vous êtes maintenant connecté.</p>';
+    }
+?>
+                    <form action="connexion.php" method="post">
                         <tr  class="txt-center">
                             <td>
                                 <input type="email" name="email" class="form-class" placeholder="Email" required>
@@ -34,14 +71,19 @@
                                 <input type="password" name="password" class="form-class" placeholder="******" required>
                             </td>
                         </tr>
-                    </form>
                 </tbody>
                 <tfoot>
-                    <tr  class="txt-center">
+                    <tr class="txt-center">
+                        <td>
+                            <p><label><input type="checkbox" name="connect" checked> Automatic connection</p></label>
+                        </td>
+                    </tr>
+                    <tr class="txt-center">
                         <td>
                             <button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-mid pointer">Log in</button>
                         </td>
                     </tr>
+                    </form>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
