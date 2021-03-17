@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require('src/connection.php');
 
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_confirm'])){
@@ -58,6 +60,9 @@
 
 <!-- LOG IN -->
         <section>
+<?php
+    if(!isset($_SESSION['connect'])){
+?>
             <table class="box-center">
             <!-- TITLE -->
                 <thead>
@@ -110,12 +115,18 @@
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <p id="signInProposition">Want to log in ?</p>
-                            <!-- <a href="#"><button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-sml pointer">Log in</button></a> -->
+                            <p id="signInProposition">Want to <a href="connexion.php">log in
+                                <!-- <button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-sml pointer">Log in</button> -->
+                            </a> ?</p>
+                            
                         </td>
                     </tr>
                 </tfoot>    
             </table>
+            <?php } else { ?>
+            <p class="txt-center">Bonjour <?= $_SESSION['pseudo']?></p>
+            <p class="txt-center"><a href="disconnection.php">Disconnection</a></p>
+            <?php } ?>
         </section>
     </main>
     <!-- FOOTER -->

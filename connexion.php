@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    if(isset($_SESSION['connect'])){
+        header('location: index.php');
+    }
+
+
     require('src/connection.php');
 
     if (!empty($_POST['email']) && !empty($_POST['password'])){
@@ -18,6 +25,8 @@
         while($user = $req->fetch()) {
             if($password == $user['password']) {
                 $error = 0;
+                $_SESSION['connect'] = 1;
+                $_SESSION['pseudo'] = $user['pseudo'];
                 header('location: connexion.php?success=1');
                 exit();
             }
