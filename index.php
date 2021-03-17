@@ -125,6 +125,7 @@
             </table>
             <?php } else { ?>
             <p class="txt-center">Bonjour <?= $_SESSION['pseudo']?></p>
+            <p class="txt-center"><a href="disconnection.php">Disconnection</a></p>
             <?php } ?>
         </section>
     </main>
