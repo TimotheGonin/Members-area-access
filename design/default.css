@@ -69,8 +69,8 @@ body {
 /*butttons global*/
 
 .btn {
-    display: block;
     border: 0;
+    margin: 10px;
     padding: 5px;
     color: white;
     font-weight: bold;
@@ -81,26 +81,20 @@ body {
     text-transform: uppercase;
 }
 
-.log-btn-sml {
+.log-btn {
     background-color: #42b72a;
 }
 
-.log-btn-mid {
-    width: 50%;
-    background-color: #42b72a;
-}
-
-.sign-btn-sml {
-    background-color: #1877f2;
-}
-
-.sign-btn-mid {
-    width: 50%;
+.sign-btn {
     background-color: #1877f2;
 }
 
 
 /*log in form*/
+
+section {
+    height: 80vh;
+}
 
 table {
     width: 40%;
@@ -116,7 +110,6 @@ table {
 }
 
 hr {
-    margin-top: 25px;
     width: 5%;
 }
 
@@ -124,20 +117,7 @@ a {
     text-decoration: none;
 }
 
-#signInProposition {
+#logInProposition {
     font-style: italic;
     color: grey;
-}
-
-#signInBtn {
-    margin-bottom: 40px;
-}
-
-
-/*footer*/
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
