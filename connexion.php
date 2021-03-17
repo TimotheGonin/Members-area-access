@@ -27,6 +27,15 @@
                 $error = 0;
                 $_SESSION['connect'] = 1;
                 $_SESSION['pseudo'] = $user['pseudo'];
+
+                //COOKIE
+                if(isset($_POST['connect'])){
+                    //log
+                    //$user['secret];
+                    setcookie('log', $user['secret'], time() + 365*24*3600, '/', null, false, true);
+                    /*HTTP ONLY*/
+                }
+
                 header('location: connexion.php?success=1');
                 exit();
             }
