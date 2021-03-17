@@ -89,6 +89,15 @@ body {
     background-color: #1877f2;
 }
 
+.proposition {
+    font-style: italic;
+    color: grey;
+}
+
+a:visited {
+    color: blue;
+}
+
 
 /*log in form*/
 
@@ -105,19 +114,10 @@ table {
     background-color: white;
 }
 
-#logInBtn {
-    margin-top: 20px;
-}
-
 hr {
     width: 5%;
 }
 
 a {
     text-decoration: none;
-}
-
-#logInProposition {
-    font-style: italic;
-    color: grey;
 }

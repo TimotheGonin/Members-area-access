@@ -115,7 +115,7 @@
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <p id="logInProposition">Want to <a href="connexion.php">log in</a> ?</p>
+                            <p class="proposition"">Want to <a href="connexion.php">log in</a> ?</p>
                         </td>
                     </tr>
                 </tfoot>    
