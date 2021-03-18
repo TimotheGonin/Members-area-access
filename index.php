@@ -62,7 +62,7 @@
         <section>
 <?php
     if(!isset($_SESSION['connect'])){
-?>
+?> 
             <table class="box-center">
             <!-- TITLE -->
                 <thead>
@@ -108,17 +108,14 @@
                 <tfoot>
                     <tr  class="txt-center">
                         <td>
-                        <button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn-mid pointer">Sign in</button>
+                        <button type="submit" id="signInBtn" name="singin" class="box-center btn sign-btn pointer">Sign in</button>
                         </td>
                     </form>
                     </tr>
 <!-- btn separation --><tr><td><hr></td></tr>
                     <tr  class="txt-center">
                         <td>
-                            <p id="signInProposition">Want to <a href="connexion.php">log in
-                                <!-- <button type="submit" id="logInBtn" name="login" class="box-center btn log-btn-sml pointer">Log in</button> -->
-                            </a> ?</p>
-                            
+                            <p class="proposition"">Want to <a href="connexion.php">log in</a> ?</p>
                         </td>
                     </tr>
                 </tfoot>    
